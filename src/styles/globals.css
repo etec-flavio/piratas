@@ -1,0 +1,73 @@
+@charset "UTF-8";
+@layer reset, base, layout, components, theme;
+
+@layer reset {
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
+    body {
+        line-height: 1.6rem;
+        color: var(--text);
+        background-color: var(--background);
+    }
+    ol, ul {
+        list-style: none;
+    }
+    blockquote, q {
+        quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: "";
+        content: none;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    button, input, output {
+        border: none;
+        outline: none;
+    }
+
+    h1, h2, h3, h4, h5 { font-weight: 700; }
+
+    html { font-size: 100%; font-weight: 400; }
+    h1 { font-size: 5.652rem; line-height: 4.4rem; }
+    h2 { font-size: 3.997rem; line-height: 3.2rem; }
+    h3 { font-size: 2.827rem; line-height: 2.8rem; }
+    h4 { font-size: 1.999rem; line-height: 2rem; }
+    h5 { font-size: 1.414rem; line-height: 1.6rem; }
+    small { font-size: 0.707rem; line-height: 1rem; }
+}
+
+@layer base {
+    h1, h2, h3, h4, h5 { margin: .4em 0; }
+    h2 { color: color-mix(in srgb, var(--text) 90%, var(--background)); }
+
+    p + p:not(:last-child) {
+        margin-top: 1em;
+    }
+}
