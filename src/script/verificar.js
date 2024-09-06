@@ -1,9 +1,3 @@
-export default function verificar(letra, tema) {
-    if (tema.includes(letra) && letra != "") {
-        return true
-    }
-    
-    else {
-        return false
-    }
+export function verificarLetra(letra, tema) {
+    return tema.includes(letra) && letra !== ""
 }
